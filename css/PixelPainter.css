@@ -1,0 +1,189 @@
+html {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('../img/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+h1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font-family: 'Press Start 2P', cursive;
+}
+
+#pixelPainter {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+#artboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80%;
+  width: 45%;
+}
+
+#canvas {
+  width: 100%;
+  height: 70%;
+  border: 10px solid #aa6d29;
+  border-radius: 15px;
+  border
+}
+
+#swatch {
+  width: 95%;
+  height: 4%;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.pixel {
+  flex: 1 1 0;
+  border: 0.1px solid rgb(228, 228, 228);
+  width: 3.08%;
+  height: 3.08%;
+  background: #fff;
+}
+
+.row {
+  display: flex;
+}
+
+#swatch .pixel {
+  width: 6%;
+  height: 100%;
+}
+
+#toolkit {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 8%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  background:rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+}
+
+#toolkit button {
+  width: 20%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  font-weight: bold;
+  box-shadow: 0.5px 0.5px 1px 1px #bbb;
+}
+
+#saveConsole {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 8%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  background:rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+}
+
+#saveConsole button {
+  width: 40%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  font-weight: bold;
+  background: #ccc;
+  box-shadow: 0.5px 0.5px 1px 1px #bbb;
+}
+
+#saveConsole button:hover {
+  background: rgb(231, 231, 231);
+}
+
+#clear {
+  color: #fff;
+  background: #e12323;
+}
+
+#clear:hover {
+  background: #bb1b1b;
+}
+
+#brush:hover,
+#bucket:hover,
+#erase:hover {
+  background: rgb(231, 231, 231);
+}
+
+.selected {
+  border: 1.5px solid rgba(81, 203, 238, 0.5);
+}
+
+:focus {
+  outline: none;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and  (max-width: 425px) {
+  #artboard {
+    height: 80%;
+    width: 95%;
+  }
+
+  #toolkit,
+  #saveConsole
+  #swatch {
+    height: 8%;
+  }
+
+  #pixelPainter {
+    height: 80%;
+    justify-content: flex-start;
+  }
+
+  body {
+    font-size: 0.4em;
+    justify-content: flex-end;
+  }
+
+  button {
+    font-size: 1em;
+  }
+}
+
+@media only screen and  (min-width: 426px) and (max-width: 768px) {
+  #artboard {
+    height: 80%;
+    width: 85%;
+  }
+}
+
