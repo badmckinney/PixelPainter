@@ -196,10 +196,17 @@ for (let i = 0; i < swatches.length; i++) {
   swatches[i].style.background = colors[i];
   swatches[i].id = colors[i]
   swatches[i].addEventListener('click', (e) => {
-    eraseButton.classList.remove('selected');
+    deselectTools();
     deselectColors();
     swatches[i].classList.add('selected');
     activeColor = e.target.id;
+    if (activeTool === "eraser" || activeTool === "brush") {
+      brushButton.classList.add('selected');
+      activeTool = "brush";
+    } else {
+      activeTool = "bucket"
+      bucketButton.classList.add('selected');
+    }
   });
 }
 
@@ -217,7 +224,7 @@ for (let i = 0; i < swatches.length; i++) {
 // if pixel does NOT match target color, return current pixel as boundary
 // if in the beginning, next pixel is outside the canvas, return starting boundary
 const findTopBoundary = (id) => {
-  debugger;
+  //debugger;
   let nextPixel = parseInt(id) - 32;
   let boundary = parseInt(id);
   while (nextPixel > 0) {

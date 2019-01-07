@@ -77,6 +77,11 @@ button {
 #swatch .pixel {
   width: 6%;
   height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+#swatch .pixel:hover {
+  transform: scale(1.2, 1.2);
 }
 
 #toolkit {
@@ -137,14 +142,22 @@ button {
   background: #bb1b1b;
 }
 
+#brush,
+#bucket,
+#erase {
+  transition: transform 0.2s ease-in-out;
+}
+
 #brush:hover,
 #bucket:hover,
 #erase:hover {
-  background: rgb(231, 231, 231);
+  background: rgb(243, 243, 243);
+  transform: scale(1.1, 1.1);
 }
 
 .selected {
-  border: 1.5px solid rgba(81, 203, 238, 0.5);
+  border: 1.5px solid rgba(81, 203, 238, 0.8);
+  transform: scale(1.2, 1.2);
 }
 
 :focus {
