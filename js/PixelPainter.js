@@ -254,7 +254,7 @@ for (let i = 0; i < 993; i += 32) {
 // if pixel being checked matches target color
 // add pixel to pixelStack
 const checkLeft = (id) => {
-  //debugger;
+  debugger;
   let newID = parseInt(id) - 1;
   let checking = pixels[newID];
   if (checking && !edgeR.includes(newID)) {
@@ -305,8 +305,8 @@ const fillToBottomBoundary = (topBoundary) => {
   for (let i = topBoundary; i < pixels.length; i += 32) {
     if (i + 32 > pixels.length && pixels[i].style.background === target) {
       pixels[i].style.background = activeColor;
-      checkLeft();
-      checkRight();
+      checkLeft(i);
+      checkRight(i);
       floodFill();
     } else if (pixels[i].style.background === target) {
       pixels[i].style.background = activeColor;
