@@ -1,5 +1,4 @@
 # Reverse Tic-Tac-Toe
-=====================
 
 A pixel paint web application written in pure vanilla Javascript.
 
