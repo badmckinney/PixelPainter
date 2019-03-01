@@ -51,7 +51,7 @@ button {
   height: 70%;
   border: 10px solid #aa6d29;
   border-radius: 15px;
-  border
+  z-index: 3;
 }
 
 #swatch {
@@ -64,14 +64,16 @@ button {
 
 .pixel {
   flex: 1 1 0;
-  border: 0.1px solid rgb(228, 228, 228);
+  border: 0.05px solid rgb(228, 228, 228);
   width: 3.08%;
-  height: 3.08%;
+  height: 3.10%;
   background: #fff;
+  margin: 0px 0px 0px 0px;
 }
 
 .row {
   display: flex;
+  margin: 0px;
 }
 
 #swatch .pixel {
@@ -162,6 +164,10 @@ button {
 
 :focus {
   outline: none;
+}
+
+#grid {
+  border-radius: 15px;
 }
 
 /* MEDIA QUERIES */
